@@ -1,0 +1,22 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="format-detection" content="email=no"><title>Q&amp;A</title><link rel="stylesheet" href="/css/main_style.min.css"></head><body><div class="post-header"><img class="background" src="/default_images/post_background.jpg"><div class="post-title"><h1 class="title">Q&amp;A</h1><ul class="meta"><li><i class="icon icon-author"></i>Laughing Gor</li><li><i class="icon icon-clock"></i>2 Minutes</li><li><i class="icon icon-calendar"></i>September 8, 2015</li></ul></div></div><div class="article-content"><p>[ecko_toggle style=”solid” state=”open” title=”Windows下Sublime Text 默认打开方式问题解决办法”]删除 HKEY_CURRENT_USER\Software\Classes\Applications下的Sublime_Text.exe项。 （打开注册表：regedit）[/ecko_toggle]</p>
+<p>[ecko_toggle style=”solid” state=”closed” title=”Nginx跨域使用字体文件的配置方法”]在Nginx的conf目录下修改nginx.conf或者vhost下对应的domain conf，在server里面添加以下代码：[ecko_code_highlight language=”javascript”]location ~<em> .(eot|svg|ttf|woff|woff2|otf)$ {<br>add_header Access-Control-Allow-Origin </em>;<br>}[/ecko_code_highlight][/ecko_toggle]</p>
+<p>[ecko_toggle style=”solid” state=”closed” title=”英文或链接过长溢出框外怎么办？”]在css中定义：<code>word-wrap:break-word;</code>[/ecko_toggle]</p>
+<p>[ecko_toggle style=”solid” state=”closed” title=”使用sessionStorage、localStorage存储数组与对象”]我们可以通过JSON对象提供的parse和stringify将其他数据类型转化成字符串，再存储到storage中就可以了。请看下面的代码：[ecko_code_highlight language=”javascript”]var obj = { name:’Jim’ };<br>var str = JSON.stringify(obj);</p>
+<p>//存入<br>sessionStorage.obj = str;<br>//读取<br>str = sessionStorage.obj;<br>//重新转换为对象<br>obj = JSON.parse(str);<br>[/ecko_code_highlight]<br>localStorage也一样，只是和sessionStorage的存储时间不一样。<br>JS中的数组本质上也是对象类型，所以上面的代码对数组也是适用的。<br>[/ecko_toggle]</p>
+<p>[ecko_toggle style=”solid” state=”closed” title=”安装sass时遇到gem的镜像错误”]这是由于gem的镜像在国内不能用的原因导致的，修改镜像地址为淘宝的就可以了。</p>
+<p>[ecko_code_highlight language=”shell”]$ gem sources –remove <a href="https://rubygems.org/" target="_blank" rel="external">https://rubygems.org/</a><br>$ gem sources -a <a href="https://ruby.taobao.org/" target="_blank" rel="external">https://ruby.taobao.org/</a><br>$ gem sources -l[/ecko_code_highlight]</p>
+<p>这时出现如下提示时说明成功了：[ecko_code_highlight language=”shell”]<strong><em> CURRENT SOURCES </em></strong></p>
+<p><a href="https://ruby.taobao.org[/ecko_code_highlight" target="_blank" rel="external">https://ruby.taobao.org[/ecko_code_highlight</a>]</p>
+<p>再执行下面的命令试试是不是可以了：</p>
+<p>[ecko_code_highlight language=”shell”]sudo gem install sass[/ecko_code_highlight][/ecko_toggle]</p>
+<p>[ecko_toggle style=”solid” state=”closed” title=”如何去掉textarea右下角的灰色角标？”]在css中定义：<code>resize: none;</code> ，这个样式同时禁用textarea调整大小[/ecko_toggle]</p>
+</div><div class="article-meta"></div><div class="article-comment"><div class="ds-thread" id="ds-thread" data-thread-key="civazeb870008f0sa0qgkzjk5" data-title="Q&amp;A" data-url="/qa/index.html" site-name="ueibo"></div><script>var siteName = document.getElementById('ds-thread').getAttribute('site-name');
+var duoshuoQuery = {short_name: siteName};
+(function() {
+  var ds = document.createElement('script');
+  ds.type = 'text/javascript';ds.async = true;
+  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+  ds.charset = 'UTF-8';
+  (document.getElementsByTagName('head')[0] 
+  || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();</script></div><div class="page-footer"><div class="top"><ul class="social"><li><a href="http://github.com/BoizZ" title="GitHub" target="_blank"><i class="icon icon-github"></i></a></li><li><a href="http://weibo.com/heqibang" title="Weibo" target="_blank"><i class="icon icon-weibo"></i></a></li><li><a href="http://www.segmentfault.com/u/bon" title="SegmentFault" target="_blank"><i class="icon icon-segmentfault"></i></a></li></ul></div><div class="bottom"><p class="copyright">POWER BY CCWEBSITE.COM</p></div></div></body></html>
